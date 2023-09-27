@@ -127,7 +127,7 @@ dirty=np.real(np.fft.ifft2(maskz))
 dbeam=np.real(np.fft.ifft2(mask))
 dbeam/=np.max(dbeam) # normalize the dirty beam to 1
 
-#here we could write out the dirty image
+# Here we could write out the dirty image
 #hdu[0].data=dirty
 #hdu.writeto('test.fits',overwrite=True)
 
@@ -145,7 +145,7 @@ plt.ylabel('$m$')
 
 niter=2000
 gain=0.2 # the 'CLEAN gain'
-model=np.zeros_like(dirty) # an image to store what we've CLEANEd
+model=np.zeros_like(dirty) # an image to store what we've CLEANed
 
 # Go round for niter iterations
 for i in tqdm(range(niter)):
